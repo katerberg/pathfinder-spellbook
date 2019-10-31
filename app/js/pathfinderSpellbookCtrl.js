@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('pathfinderApp')
-    .controller('PathfinderSpellbookCtrl', function($scope, pathfinderService, modalService) {
+    .controller('PathfinderSpellbookCtrl', ['$scope', 'pathfinderService', 'modalService', function($scope, pathfinderService, modalService) {
         pathfinderService.getSpellbook().then(function(data) {
             $scope.spellbook = data;
         });
@@ -25,5 +25,5 @@
         }
 
         $scope.drillIntoSpell = drillIntoSpell;
-    });
+    }]);
 })();

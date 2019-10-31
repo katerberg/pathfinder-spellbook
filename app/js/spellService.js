@@ -1,5 +1,5 @@
 (function() {
-    angular.module('pathfinderApp').factory('spellService', function(Spell) {
+    angular.module('pathfinderApp').factory('spellService', ['Spell', function(Spell) {
         function spellify(dirtySpell) {
             Object.keys(dirtySpell.fields, function(key, value) {
                 dirtySpell.fields[key] = value.replace(/<[^>]*>/gm, '');
@@ -10,5 +10,5 @@
         return {
             spellify: spellify
         };
-    });
+    }]);
 })();

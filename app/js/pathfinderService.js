@@ -1,5 +1,5 @@
 (function() {
-    angular.module('pathfinderApp').factory('pathfinderService', function($http, $q, spellService) {
+    angular.module('pathfinderApp').factory('pathfinderService', ['$http', '$q', 'spellService', function($http, $q, spellService) {
         function getSpellbook() {
             return $http.get('static/spells.json').then(function(res) {
                 return res.data.map(function(dirtySpell) {
@@ -19,6 +19,5 @@
             getSpellbook: getSpellbook,
             casterTypes: casterTypes
         };
-    });
+    }]);
 })();
-

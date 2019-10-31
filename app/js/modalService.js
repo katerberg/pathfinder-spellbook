@@ -1,5 +1,5 @@
 (function() {
-    angular.module('pathfinderApp').factory('modalService', function($modal) {
+    angular.module('pathfinderApp').factory('modalService', ['$modal', function($modal) {
         return {
             open: $modal.open,
             spell: {
@@ -7,5 +7,5 @@
                 controller: 'SpellModalCtrl'
             }
         };
-    });
+    }]);
 })();

@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    angular.module('pathfinderApp').controller('SpellModalCtrl', function($scope, $modalInstance, spell) {
+    angular.module('pathfinderApp').controller('SpellModalCtrl', ['$scope', '$modalInstance', 'spell', function($scope, $modalInstance, spell) {
         function close() {
             $modalInstance.close();
         }
@@ -13,5 +13,5 @@
         $scope.close = close;
         $scope.spell = spell;
         $scope.showDetails = showDetails;
-    });
+    }]);
 })();
