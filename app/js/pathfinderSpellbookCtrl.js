@@ -8,11 +8,6 @@
         });
 
         $scope.casterTypes = pathfinderService.casterTypes;
-        $scope.$watch('search.level', function(item) {
-            if (item === null) {
-                $scope.search.level = undefined;
-            }
-        });
 
         function drillIntoSpell(spell) {
             modalService.open({

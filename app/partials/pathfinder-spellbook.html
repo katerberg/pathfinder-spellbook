@@ -3,9 +3,6 @@
     <section>
         <h2>
             <input class="search form-control" type="text" ng-model="search.name" placeholder="Search"/>
-            <select class="form-control" ng-model="search.level" ng-options="type for type in casterTypes">
-                <option value="">--Select Class--</option>
-            </select>
         </h2>
         <div class="spells">
             <article ng-click="drillIntoSpell(spell)" ng-repeat="spell in spellbook | filter: search">

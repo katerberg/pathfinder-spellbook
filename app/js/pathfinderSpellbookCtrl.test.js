@@ -58,27 +58,6 @@ describe('PathfinderSpellbookCtrl', function() {
             expect(scope.casterTypes).toBe(pathfinderService.casterTypes);
         });
 
-        describe('search', function() {
-            it('should not allow null settings for level in search', function() {
-                scope.search = {};
-
-                scope.search.level = null;
-                scope.$apply();
-
-                expect(scope.search.level).toBeUndefined();
-            });
-
-            it('should not change level if it is not null', function() {
-                scope.search = {};
-                var expected = 'something else';
-
-                scope.search.level = expected;
-                scope.$apply();
-
-                expect(scope.search.level).toBe(expected);
-            });
-        });
-
         describe('#drillIntoSpell', function() {
             beforeEach(function() {
                 spyOn(modalService, 'open');
