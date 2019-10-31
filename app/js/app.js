@@ -4,7 +4,8 @@
 
 var pathfinderApp = angular.module('pathfinderApp', [
   'ngRoute',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'puigcerber.capitalize',
 ]);
 
 pathfinderApp.config(['$routeProvider',
