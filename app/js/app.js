@@ -3,7 +3,8 @@
 /* App Module */
 
 var pathfinderApp = angular.module('pathfinderApp', [
-  'ngRoute'
+  'ngRoute',
+  'ui.bootstrap'
 ]);
 
 pathfinderApp.config(['$routeProvider',
