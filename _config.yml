@@ -1,0 +1,1 @@
+exclude: ["app/bower_components", "Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
